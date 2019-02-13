@@ -1,4 +1,4 @@
-package com.aladin.web.filter;
+package com.aladin.pojo.web.filter;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;

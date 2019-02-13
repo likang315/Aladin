@@ -53,7 +53,7 @@
   <!-- jsessionid filter -->
   <filter>
     <filter-name>jsessionidFilter</filter-name>
-    <filter-class>com.aladin.web.filter.DisableUrlSessionFilter</filter-class>
+    <filter-class>com.aladin.pojo.web.filter.DisableUrlSessionFilter</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>jsessionidFilter</filter-name>

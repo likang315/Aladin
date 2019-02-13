@@ -1,4 +1,4 @@
-package com.aladin.dao;
+package com.aladin.pojo.dao;
 
 import com.bishe.portal.model.mo.TbUsers;
 import org.apache.ibatis.annotations.Param;

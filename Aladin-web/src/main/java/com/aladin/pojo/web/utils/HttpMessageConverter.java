@@ -1,4 +1,4 @@
-package com.aladin.web.utils;
+package com.aladin.pojo.web.utils;
 
 import org.springframework.http.HttpInputMessage;
 import org.springframework.http.HttpOutputMessage;
