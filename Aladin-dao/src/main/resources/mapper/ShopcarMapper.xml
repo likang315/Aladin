@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aladin.dao.shopcar.ShopcarDao">
+
+  <resultMap id="BaseResultMap" type="com.aladin.pojo.shopcar.Shopcar">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="shop_id" jdbcType="BIGINT" property="shopId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="stat" jdbcType="TINYINT" property="stat" />
+    <result column="c_time" jdbcType="TIMESTAMP" property="cTime" />
+    <result column="u_time" jdbcType="TIMESTAMP" property="uTime" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id, shop_id, user_id, stat, c_time, u_time, status
+  </sql>
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_shopcar
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from m_shopcar
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+
+  <insert id="insert" parameterType="com.aladin.pojo.shopcar.Shopcar">
+    insert into m_shopcar (id, shop_id, user_id, 
+      stat, c_time, u_time, 
+      status)
+    values (#{id,jdbcType=BIGINT}, #{shopId,jdbcType=BIGINT}, #{userId,jdbcType=BIGINT}, 
+      #{stat,jdbcType=TINYINT}, #{cTime,jdbcType=TIMESTAMP}, #{uTime,jdbcType=TIMESTAMP}, 
+      #{status,jdbcType=TINYINT})
+  </insert>
+
+  <insert id="insertSelective" parameterType="com.aladin.pojo.shopcar.Shopcar">
+    insert into m_shopcar
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="shopId != null">
+        shop_id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="stat != null">
+        stat,
+      </if>
+      <if test="cTime != null">
+        c_time,
+      </if>
+      <if test="uTime != null">
+        u_time,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="shopId != null">
+        #{shopId,jdbcType=BIGINT},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="stat != null">
+        #{stat,jdbcType=TINYINT},
+      </if>
+      <if test="cTime != null">
+        #{cTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="uTime != null">
+        #{uTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+
+  <update id="updateByPrimaryKeySelective" parameterType="com.aladin.pojo.shopcar.Shopcar">
+    update m_shopcar
+    <set>
+      <if test="shopId != null">
+        shop_id = #{shopId,jdbcType=BIGINT},
+      </if>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="stat != null">
+        stat = #{stat,jdbcType=TINYINT},
+      </if>
+      <if test="cTime != null">
+        c_time = #{cTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="uTime != null">
+        u_time = #{uTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=TINYINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+  <update id="updateByPrimaryKey" parameterType="com.aladin.pojo.shopcar.Shopcar">
+    update m_shopcar
+    set shop_id = #{shopId,jdbcType=BIGINT},
+      user_id = #{userId,jdbcType=BIGINT},
+      stat = #{stat,jdbcType=TINYINT},
+      c_time = #{cTime,jdbcType=TIMESTAMP},
+      u_time = #{uTime,jdbcType=TIMESTAMP},
+      status = #{status,jdbcType=TINYINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+</mapper>
