@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aladin.dao.shopcar.ShopdetaDao">
+  <resultMap id="BaseResultMap" type="com.aladin.pojo.shopcar.Shopdeta">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="shop_id" jdbcType="BIGINT" property="shopId" />
+    <result column="pudu_id" jdbcType="BIGINT" property="puduId" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="number" jdbcType="INTEGER" property="number" />
+    <result column="stat" jdbcType="TINYINT" property="stat" />
+    <result column="c_time" jdbcType="TIMESTAMP" property="cTime" />
+    <result column="u_time" jdbcType="TIMESTAMP" property="uTime" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id, shop_id, pudu_id, status, number, stat, c_time, u_time
+  </sql>
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_shopdeta
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from m_shopdeta
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+
+  <insert id="insert" parameterType="com.aladin.pojo.shopcar.Shopdeta">
+    insert into m_shopdeta (id, shop_id, pudu_id, 
+      status, number, stat, 
+      c_time, u_time)
+    values (#{id,jdbcType=BIGINT}, #{shopId,jdbcType=BIGINT}, #{puduId,jdbcType=BIGINT}, 
+      #{status,jdbcType=TINYINT}, #{number,jdbcType=INTEGER}, #{stat,jdbcType=TINYINT}, 
+      #{cTime,jdbcType=TIMESTAMP}, #{uTime,jdbcType=TIMESTAMP})
+  </insert>
+
+  <insert id="insertSelective" parameterType="com.aladin.pojo.shopcar.Shopdeta">
+    insert into m_shopdeta
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="shopId != null">
+        shop_id,
+      </if>
+      <if test="puduId != null">
+        pudu_id,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="number != null">
+        number,
+      </if>
+      <if test="stat != null">
+        stat,
+      </if>
+      <if test="cTime != null">
+        c_time,
+      </if>
+      <if test="uTime != null">
+        u_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="shopId != null">
+        #{shopId,jdbcType=BIGINT},
+      </if>
+      <if test="puduId != null">
+        #{puduId,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="number != null">
+        #{number,jdbcType=INTEGER},
+      </if>
+      <if test="stat != null">
+        #{stat,jdbcType=TINYINT},
+      </if>
+      <if test="cTime != null">
+        #{cTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="uTime != null">
+        #{uTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+
+  <update id="updateByPrimaryKeySelective" parameterType="com.aladin.pojo.shopcar.Shopdeta">
+    update m_shopdeta
+    <set>
+      <if test="shopId != null">
+        shop_id = #{shopId,jdbcType=BIGINT},
+      </if>
+      <if test="puduId != null">
+        pudu_id = #{puduId,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="number != null">
+        number = #{number,jdbcType=INTEGER},
+      </if>
+      <if test="stat != null">
+        stat = #{stat,jdbcType=TINYINT},
+      </if>
+      <if test="cTime != null">
+        c_time = #{cTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="uTime != null">
+        u_time = #{uTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+  <update id="updateByPrimaryKey" parameterType="com.aladin.pojo.shopcar.Shopdeta">
+    update m_shopdeta
+    set shop_id = #{shopId,jdbcType=BIGINT},
+      pudu_id = #{puduId,jdbcType=BIGINT},
+      status = #{status,jdbcType=TINYINT},
+      number = #{number,jdbcType=INTEGER},
+      stat = #{stat,jdbcType=TINYINT},
+      c_time = #{cTime,jdbcType=TIMESTAMP},
+      u_time = #{uTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+</mapper>
