@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fac6a435-7dd7-4cdb-9798-597e5bdf373b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Aladin-dao/src/main/java/com/aladin/pojo/dao/order/m_orderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Aladin-dao/src/main/java/com/aladin/pojo/dao/order/m_orderMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Aladin-dao/src/main/java/com/aladin/pojo/dao/order/m_shoppingMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Aladin-dao/src/main/java/com/aladin/pojo/dao/order/m_shoppingMapper.java" afterDir="false" />
-    </list>
+    <list default="true" id="fac6a435-7dd7-4cdb-9798-597e5bdf373b" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/Aladin-dao/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/Aladin-web/target/" />
@@ -55,11 +51,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="m_orderMapper.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Aladin-dao/src/main/java/com/aladin/pojo/dao/order/m_orderMapper.java">
+      <file leaf-file-name="m_shoppingMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Aladin-dao/src/main/resources/mapper/m_shoppingMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="489">
+              <caret line="94" column="65" selection-start-line="94" selection-start-column="65" selection-end-line="94" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="m_orderMapper.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Aladin-dao/src/main/resources/mapper/m_orderMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7329">
+              <caret line="349" column="11" lean-forward="true" selection-start-line="349" selection-start-column="11" selection-end-line="349" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -79,6 +84,7 @@
         <option value="$PROJECT_DIR$/Aladin-pojo/Aladin-pojo.iml" />
         <option value="$PROJECT_DIR$/Aladin-dao/src/main/java/com/aladin/pojo/dao/order/m_shoppingMapper.java" />
         <option value="$PROJECT_DIR$/Aladin-dao/src/main/java/com/aladin/pojo/dao/order/m_orderMapper.java" />
+        <option value="$PROJECT_DIR$/Aladin-dao/src/main/resources/mapper/m_orderMapper.xml" />
       </list>
     </option>
   </component>
@@ -100,7 +106,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="316" />
     <option name="width" value="1050" />
     <option name="height" value="728" />
@@ -285,12 +291,12 @@
       <workItem from="1548574887060" duration="629000" />
       <workItem from="1550076970783" duration="1999000" />
       <workItem from="1550317433338" duration="2374000" />
-      <workItem from="1550323377989" duration="793000" />
+      <workItem from="1550323377989" duration="1528000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5795000" />
+    <option name="totallyTimeSpent" value="6530000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -472,37 +478,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Aladin-dao/src/main/resources/mapper/m_orderMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Aladin-dao/src/main/resources/mapper/TbUserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Aladin-dao/src/main/resources/mapper/m_shoppingMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1974">
-          <caret line="94" column="65" selection-start-line="94" selection-start-column="65" selection-end-line="94" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Aladin-dao/src/main/java/com/aladin/pojo/dao/TbUsersDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Aladin-pojo/src/com/aladin/pojo/m_order.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -517,17 +492,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Aladin-dao/src/main/java/com/aladin/pojo/dao/order/m_shoppingMapper.java">
+    <entry file="file://$PROJECT_DIR$/Aladin-dao/src/main/java/com/aladin/pojo/dao/order/m_orderMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="50" column="13" lean-forward="true" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+        <state relative-caret-position="1155">
+          <caret line="55" column="1" lean-forward="true" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Aladin-dao/src/main/java/com/aladin/pojo/dao/order/m_orderMapper.java">
+    <entry file="file://$PROJECT_DIR$/Aladin-dao/src/main/resources/mapper/TbUserMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="168">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Aladin-dao/src/main/java/com/aladin/pojo/dao/TbUsersDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Aladin-dao/src/main/java/com/aladin/pojo/dao/order/m_shoppingMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="40" column="7" lean-forward="true" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Aladin-dao/src/main/resources/mapper/m_shoppingMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="94" column="65" selection-start-line="94" selection-start-column="65" selection-end-line="94" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Aladin-dao/src/main/resources/mapper/m_orderMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7329">
+          <caret line="349" column="11" lean-forward="true" selection-start-line="349" selection-start-column="11" selection-end-line="349" selection-end-column="11" />
         </state>
       </provider>
     </entry>
