@@ -14,4 +14,6 @@ public interface ShopcarDao {
     int updateByPrimaryKeySelective(Shopcar record);
 
     int updateByPrimaryKey(Shopcar record);
+
+    Long selectShopIdByUserId(Long user_id);
 }

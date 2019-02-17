@@ -1,0 +1,12 @@
+com\aladin\dao\shopcar\ShopdetaDao.class
+com\aladin\pojo\dao\order\m_orderMapper.class
+com\aladin\pojo\dao\order\m_shoppingMapper.class
+com\aladin\dao\user\CollectionDao.class
+com\aladin\dao\product\SpecsMapper.class
+com\aladin\dao\shopcar\ShopcarDao.class
+com\aladin\dao\product\BrandMapper.class
+com\aladin\dao\product\CategoryMapper.class
+com\aladin\dao\product\PictureMapper.class
+com\aladin\dao\user\AdressDao.class
+com\aladin\dao\user\UserDao.class
+com\aladin\dao\product\ProductMapper.class
