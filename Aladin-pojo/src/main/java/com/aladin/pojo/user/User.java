@@ -1,5 +1,6 @@
 package com.aladin.pojo.user;
 
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 public class User {
@@ -18,6 +19,7 @@ public class User {
     /**
      *用户的电话
      */
+    @Size()
     private String phone;
     /**
      *用户原始密码
@@ -59,11 +61,6 @@ public class User {
      *盐值
      */
     private String salt;
-    /**
-     * 经过盐值加密后的密码
-     */
-    private String pwd2;
-
     public Long getUsId()
     {
         return usId;
@@ -186,13 +183,5 @@ public class User {
 
     public void setSalt(String salt) {
         this.salt = salt == null ? null : salt.trim();
-    }
-
-    public String getPwd2() {
-        return pwd2;
-    }
-
-    public void setPwd2(String pwd2) {
-        this.pwd2 = pwd2 == null ? null : pwd2.trim();
     }
 }
