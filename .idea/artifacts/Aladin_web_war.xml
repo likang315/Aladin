@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="Aladin-web:war">
-    <output-path>$PROJECT_DIR$/Aladin-web/target</output-path>
-    <root id="archive" name="BiShe-web.war">
-      <element id="artifact" artifact-name="Aladin-web:war exploded" />
-    </root>
-  </artifact>
-</component>
