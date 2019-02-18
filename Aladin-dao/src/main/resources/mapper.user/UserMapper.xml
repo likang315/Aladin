@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aladin.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="com.aladin.pojo.User">
+        <id column="us_id" jdbcType="BIGINT" property="usId" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="email" jdbcType="VARCHAR" property="email" />
+        <result column="phone" jdbcType="VARCHAR" property="phone" />
+        <result column="pwd" jdbcType="VARCHAR" property="pwd" />
+        <result column="per_tit" jdbcType="VARCHAR" property="perTit" />
+        <result column="per_sign" jdbcType="VARCHAR" property="perSign" />
+        <result column="birth" jdbcType="DATE" property="birth" />
+        <result column="coun_id" jdbcType="VARCHAR" property="counId" />
+        <result column="c_time" jdbcType="TIMESTAMP" property="cTime" />
+        <result column="u_time" jdbcType="TIMESTAMP" property="uTime" />
+        <result column="stat" jdbcType="TINYINT" property="stat" />
+        <result column="sex" jdbcType="CHAR" property="sex" />
+        <result column="salt" jdbcType="VARCHAR" property="salt" />
+    </resultMap>
+    <sql id="Base_Column_List">
+    us_id,name,email,phone,pwd,per_tit,per_sign,birth,coun_id,c_time,u_time,
+    stat,sex,salt
+  </sql>
+    <select id="selectUserById" parameterType="String" resultType="BaseResultMap">
+        select us_id,name,email,phone,pwd,per_tit,per_sign,birth,coun_id,c_time,u_time,stat,sex,salt from m_user where coun_id = #{coun_id}
+    </select>
+    <insert id="registUser" parameterType="BaseResultMap">
+        INSERT INTO m_user (email,phone,pwd,coun_id,sex) VALUES (#{email},#{phone},#{pwd},#{coun_id},#{sex})
+    </insert>
+
+</mapper>

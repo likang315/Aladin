@@ -5,17 +5,6 @@ import com.aladin.pojo.user.User;
 import java.util.List;
 
 public interface UserDao {
-    int deleteByPrimaryKey(Long usId);
-
-    int insert(User record);
-
-    int insertSelective(User record);
-
-    User selectByPrimaryKey(Long usId);
-
-    int updateByPrimaryKeySelective(User record);
-
-    int updateByPrimaryKey(User record);
 
     /**
      * 通过主键查找一个用户
@@ -51,7 +40,7 @@ public interface UserDao {
      * @return
      */
 
-    void addUser(User user);
+    void registUser(User user);
 
     /**
      * 通过用户ID删除一个用户

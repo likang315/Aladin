@@ -1,18 +1,18 @@
 package com.aladin.dao.user;
 
-import com.aladin.pojo.user.Collection;
+import com.aladin.pojo.user.UserCollection;
 
 public interface CollectionDao {
     int deleteByPrimaryKey(Long cId);
 
-    int insert(Collection record);
+    int insert(UserCollection record);
 
-    int insertSelective(Collection record);
+    int insertSelective(UserCollection record);
 
-    Collection selectByPrimaryKey(Long cId);
+    UserCollection selectByPrimaryKey(Long cId);
 
-    int updateByPrimaryKeySelective(Collection record);
+    int updateByPrimaryKeySelective(UserCollection record);
 
-    int updateByPrimaryKey(Collection record);
+    int updateByPrimaryKey(UserCollection record);
 
 }

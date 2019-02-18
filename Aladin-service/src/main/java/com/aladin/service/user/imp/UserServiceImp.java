@@ -42,4 +42,13 @@ public class UserServiceImp implements UserService {
         return this.userDao.modifyUser(user);
     }
 
+    @Override
+    public User checkLogin(String counId, String password) {
+       User user = userDao.selectUserById(counId);
+        if(counId!=null&&user.getPwd().equals(password)){
+            return user ;
+        }
+        return null;
+    }
+
 }
