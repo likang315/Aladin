@@ -14,4 +14,5 @@ public interface AdressDao {
     int updateByPrimaryKeySelective(Adress record);
 
     int updateByPrimaryKey(Adress record);
+
 }

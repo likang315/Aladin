@@ -16,11 +16,11 @@
         <result column="stat" jdbcType="TINYINT" property="stat" />
         <result column="sex" jdbcType="CHAR" property="sex" />
         <result column="salt" jdbcType="VARCHAR" property="salt" />
-        <result column="pwd2" jdbcType="VARCHAR" property="pwd2" />
+
     </resultMap>
     <sql id="Base_Column_List">
     us_id, name, email, phone, pwd, per_tit, per_sign, birth, coun_id, c_time, u_time,
-    stat, sex, salt, pwd2
+    stat, sex, salt
   </sql>
     <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
         select
@@ -37,12 +37,12 @@
       phone, pwd, per_tit,
       per_sign, birth, coun_id,
       c_time, u_time, stat,
-      sex, salt, pwd2)
+      sex, salt)
     values (#{usId,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR},
       #{phone,jdbcType=VARCHAR}, #{pwd,jdbcType=VARCHAR}, #{perTit,jdbcType=VARCHAR},
       #{perSign,jdbcType=VARCHAR}, #{birth,jdbcType=DATE}, #{counId,jdbcType=VARCHAR},
       #{cTime,jdbcType=TIMESTAMP}, #{uTime,jdbcType=TIMESTAMP}, #{stat,jdbcType=TINYINT},
-      #{sex,jdbcType=CHAR}, #{salt,jdbcType=VARCHAR}, #{pwd2,jdbcType=VARCHAR})
+      #{sex,jdbcType=CHAR}, #{salt,jdbcType=VARCHAR})
   </insert>
     <insert id="insertSelective" parameterType="com.ssm.pojo.User">
         insert into m_user
@@ -89,9 +89,6 @@
             <if test="salt != null">
                 salt,
             </if>
-            <if test="pwd2 != null">
-                pwd2,
-            </if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="usId != null">
@@ -135,9 +132,6 @@
             </if>
             <if test="salt != null">
                 #{salt,jdbcType=VARCHAR},
-            </if>
-            <if test="pwd2 != null">
-                #{pwd2,jdbcType=VARCHAR},
             </if>
         </trim>
     </insert>
@@ -183,9 +177,6 @@
             <if test="salt != null">
                 salt = #{salt,jdbcType=VARCHAR},
             </if>
-            <if test="pwd2 != null">
-                pwd2 = #{pwd2,jdbcType=VARCHAR},
-            </if>
         </set>
         where us_id = #{usId,jdbcType=BIGINT}
     </update>
@@ -203,8 +194,7 @@
       u_time = #{uTime,jdbcType=TIMESTAMP},
       stat = #{stat,jdbcType=TINYINT},
       sex = #{sex,jdbcType=CHAR},
-      salt = #{salt,jdbcType=VARCHAR},
-      pwd2 = #{pwd2,jdbcType=VARCHAR}
+      salt = #{salt,jdbcType=VARCHAR}
     where us_id = #{usId,jdbcType=BIGINT}
   </update>
     <resultMap id="BaseResultMap" type="com.ssm.pojo.User">
@@ -226,7 +216,7 @@
     </resultMap>
     <sql id="Base_Column_List">
     us_id, name, email, phone, pwd, per_tit, per_sign, birth, coun_id, c_time, u_time,
-    stat, sex, salt, pwd2
+    stat, sex, salt
   </sql>
     <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
         select
@@ -243,12 +233,12 @@
       phone, pwd, per_tit,
       per_sign, birth, coun_id,
       c_time, u_time, stat,
-      sex, salt, pwd2)
+      sex, salt)
     values (#{usId,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR},
       #{phone,jdbcType=VARCHAR}, #{pwd,jdbcType=VARCHAR}, #{perTit,jdbcType=VARCHAR},
       #{perSign,jdbcType=VARCHAR}, #{birth,jdbcType=DATE}, #{counId,jdbcType=VARCHAR},
       #{cTime,jdbcType=TIMESTAMP}, #{uTime,jdbcType=TIMESTAMP}, #{stat,jdbcType=TINYINT},
-      #{sex,jdbcType=CHAR}, #{salt,jdbcType=VARCHAR}, #{pwd2,jdbcType=VARCHAR})
+      #{sex,jdbcType=CHAR}, #{salt,jdbcType=VARCHAR})
   </insert>
     <insert id="insertSelective" parameterType="com.ssm.pojo.User">
         insert into m_user
@@ -295,9 +285,6 @@
             <if test="salt != null">
                 salt,
             </if>
-            <if test="pwd2 != null">
-                pwd2,
-            </if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="usId != null">
@@ -342,10 +329,19 @@
             <if test="salt != null">
                 #{salt,jdbcType=VARCHAR},
             </if>
-            <if test="pwd2 != null">
-                #{pwd2,jdbcType=VARCHAR},
-            </if>
         </trim>
+    </insert>
+    <insert id="addUser" parameterType="com.ssm.pojo.User">
+           insert into m_user (us_id, name, email,
+      phone, pwd, per_tit,
+      per_sign, birth, coun_id,
+      c_time, u_time, stat,
+      sex, salt)
+    values (#{usId,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR},
+      #{phone,jdbcType=VARCHAR}, #{pwd,jdbcType=VARCHAR}, #{perTit,jdbcType=VARCHAR},
+      #{perSign,jdbcType=VARCHAR}, #{birth,jdbcType=DATE}, #{counId,jdbcType=VARCHAR},
+      #{cTime,jdbcType=TIMESTAMP}, #{uTime,jdbcType=TIMESTAMP}, #{stat,jdbcType=TINYINT},
+      #{sex,jdbcType=CHAR}, #{salt,jdbcType=VARCHAR})
     </insert>
     <update id="updateByPrimaryKeySelective" parameterType="com.ssm.pojo.User">
         update m_user
@@ -389,9 +385,6 @@
             <if test="salt != null">
                 salt = #{salt,jdbcType=VARCHAR},
             </if>
-            <if test="pwd2 != null">
-                pwd2 = #{pwd2,jdbcType=VARCHAR},
-            </if>
         </set>
         where us_id = #{usId,jdbcType=BIGINT}
     </update>
@@ -409,8 +402,7 @@
       u_time = #{uTime,jdbcType=TIMESTAMP},
       stat = #{stat,jdbcType=TINYINT},
       sex = #{sex,jdbcType=CHAR},
-      salt = #{salt,jdbcType=VARCHAR},
-      pwd2 = #{pwd2,jdbcType=VARCHAR}
+      salt = #{salt,jdbcType=VARCHAR}
     where us_id = #{usId,jdbcType=BIGINT}
   </update>
 </mapper>
