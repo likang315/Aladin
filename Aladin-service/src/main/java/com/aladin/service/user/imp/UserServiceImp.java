@@ -1,7 +1,5 @@
 package com.aladin.service.user.imp;
 
-import com.aladin.dao.user.UserDao;
-import com.aladin.pojo.user.User;
 import com.aladin.service.user.UserService;
 import org.springframework.stereotype.Service;
 

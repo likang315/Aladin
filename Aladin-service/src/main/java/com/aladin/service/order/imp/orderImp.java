@@ -2,13 +2,11 @@ package com.aladin.service.order.imp;
 
 import com.aladin.dao.order.m_orderMapper;
 import com.aladin.dao.product.ProductMapper;
-import com.aladin.dao.user.UserDao;
 import com.aladin.pojo.order.m_order;
 import com.aladin.pojo.product.Product;
 import com.aladin.pojo.product.Specs;
 import com.aladin.pojo.shopcar.Shopcar;
 import com.aladin.pojo.shopcar.Shopdeta;
-import com.aladin.pojo.user.User;
 import com.aladin.service.order.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,5 @@
 package com.aladin.service.user;
 
-import com.aladin.pojo.user.User;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,9 +1,10 @@
 package com.aladin.dao.product;
 
 import com.aladin.pojo.product.Brand;
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.stereotype.Component;
 
-import java.util.List;
-
+@MapperScan
 public interface BrandMapper {
 
     /**

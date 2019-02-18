@@ -15,7 +15,7 @@ public interface CategoryMapper {
     Category findCategoryByName(String name);
 
     /**
-     * @
+     * @ categoryId
      * 通过分类id查找分类
      */
     Category findCategoryById(Long categoryId);
