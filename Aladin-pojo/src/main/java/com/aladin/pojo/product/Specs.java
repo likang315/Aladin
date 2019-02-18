@@ -14,7 +14,7 @@ public class Specs {
      */
     private Long specsId;
 
-    /**
+    /**1
      *商品id
      */
     private Long productId;
