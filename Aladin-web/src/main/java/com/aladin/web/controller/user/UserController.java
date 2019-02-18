@@ -1,4 +1,4 @@
-package com.aladin.web.user.controller;
+package com.aladin.web.controller.user;
 
 import com.aladin.pojo.user.User;
 import com.aladin.service.user.UserService;

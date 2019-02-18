@@ -1,6 +1,8 @@
 package com.aladin.service.order;
 
 import com.aladin.pojo.order.m_order;
+import com.aladin.pojo.product.Specs;
+import com.aladin.pojo.shopcar.Shopcar;
 
 /**
  * @Author: likang
@@ -15,4 +17,20 @@ public interface OrderInfo {
      * @param order
      */
     public void orderInfo(m_order order);
+
+    /**
+     * 插入一个单品信息
+     */
+    public void insertSpecs(Shopcar shopcar,m_order order);
+
+    /**
+     * 直接购买商品
+     */
+    public void insertSingleSpecs(Specs specs,int num,m_order order);
+
+    /**
+     * 商品删除
+     */
+    public void deleteSpecs(m_order order);
+
 }

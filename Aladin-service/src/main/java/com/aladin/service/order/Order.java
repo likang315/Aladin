@@ -1,8 +1,9 @@
 package com.aladin.service.order;
 
 import com.aladin.pojo.order.m_order;
-import com.aladin.pojo.product.Product;
+import com.aladin.pojo.product.Specs;
 import com.aladin.pojo.shopcar.Shopcar;
+import com.aladin.pojo.user.User;
 
 /**
  * @Author: likang
@@ -14,6 +15,11 @@ import com.aladin.pojo.shopcar.Shopcar;
 public interface Order {
 
     /**
+     * 显示购物车信息，让买家留言
+     */
+    public void shoppingInfo(Shopcar sh);
+
+    /**
      * 从购物车生成订单id，状态码
      */
     public void createOrder(Shopcar sh);
@@ -21,7 +27,7 @@ public interface Order {
     /**
      * 直接购买，生成订单号
      */
-    public void directCreateOrder(Product pro);
+    public void directCreateOrder(Specs specs,int num,User user);
 
     /**
      * 订单支付,修改状态码为：2
@@ -32,8 +38,6 @@ public interface Order {
      * 订单取消：即调用订单删除
      */
     public void orderCancel(m_order order);
-
-
 
     /**
      * 确认收货，修改订单状态码为：3
