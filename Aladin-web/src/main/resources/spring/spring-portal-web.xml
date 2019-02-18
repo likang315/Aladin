@@ -32,11 +32,19 @@
         <property name="prefix" value="/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
+<<<<<<< HEAD
     <bean id="jacksonObjectMapper" class="com.aladin.pojo.web.utils.CustomMapper"/>
 
     <mvc:annotation-driven>
         <mvc:message-converters>
             <bean class="com.aladin.pojo.web.utils.HttpMessageConverter"/>
+=======
+    <bean id="jacksonObjectMapper" class="com.aladin.web.CustomMapper"/>
+
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <bean class="com.aladin.web.HttpMessageConverter"/>
+>>>>>>> 521823b16adde9ac8341b73a78047813056fb9af
         </mvc:message-converters>
     </mvc:annotation-driven>
 
